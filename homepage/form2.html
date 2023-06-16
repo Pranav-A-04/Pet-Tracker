@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sty1.css">
+    <title>Feedback Form</title>
+</head>
+<body>
+    <div class="headiv">
+        <h1 class="headings">Pet Tracker</h1>
+        <button> Sign out</button>
+    </div>
+    <ul>
+          <li><a href="index1.html">Home</a></li>
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Contact Us</a>
+            <div class="dropdown-content">
+              <br>Contact us on 9845361837</br>
+              <br>Reach us on instagram at @pettrackerapp</br>
+              <br>Email us at help@pettrack.org</br>
+            </div>
+          </li>
+
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Customer Care</a>
+            <div class="dropdown-content">
+              <a href="form1.html" onclick="openc1();">Report Fraud</a>
+              <a href="form2.html">Give feedback</a>
+            </div>
+          </li>
+
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">About Us</a>
+            <div class="dropdown-content">
+              <br>We are a non-profit organization that aims at</br>
+              <br>providing security to your furry friends by the</br>
+              <br>means of a smart,efficient and cost effective solution!</br>
+            </div>
+          </li>
+
+    </ul>
+            
+
+    <div>
+      <form id="form2" class="f4">
+        <label class="f6" >Please provide us with your valuable Feedback.</label><br></br>
+        <input type="text" id="feed" name="feed" placeholder="Feedback...">
+      
+        <button type="submit" onclick="feedback()">Submit</button>
+      </form>
+    </div>
+      
+    </form>
+
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="./fp.js"></script>
+ 
+</body> 
+</html>

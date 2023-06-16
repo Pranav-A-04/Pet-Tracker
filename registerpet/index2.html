@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sty.css">
+    <title>register</title>
+</head>
+<body class="b1">
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-storage-compat.js"></script>
+    <div>
+        <h1 class="headings"> Would You Like To Register Your Pet To<br>Our Extensive Database of Lost Pets?</h1>
+    </div>
+    <div>
+        <h3 class="words">This can help NGOs and other volunteers find your pet ASAP!!</h3>
+    </div>
+    <div class = "pets">
+        <h2 id="title">Register Your Pet</h2>
+        <form id="petreg" autocomplete="on">
+            <label for="petname" id="label"><b>Pet Name</b></label><br>
+            <input type="text" id="petname" placeholder="Pet Name:"/><br></br>
+            <label for="breed" id="label"><b>Breed</b></label><br>
+            <select id="breed">
+                <option value="d1">Golden Retriever</option>
+                <option value="d2">Labrador</option>
+                <option value="d3">Pug</option>
+                <option value="d4">Beagle</option>
+                <option value="d5">Husky</option>
+                <option value="d6">Poodle</option>
+                <option value="d7">German Shepherd</option>
+                <option value="d8">Great Dane</option>
+                
+            </select>
+            <!input type="text" id="pettype" placeholder="Pet Type"/><br></br>
+            <label for="petdesc" id="label"><b>Pet Description</b></label><br>
+            <input type="text" id = "petdesc" placeholder="Describe your Pet"/><br></br>
+            <label for="contact" id="label"><b>Your Contact Number</b></label><br>
+            <input type="text" id = "contact" placeholder="Contact Info"/><br></br>
+            <label for="contact2" id="label"><b>Your E-Mail ID</b></label><br>
+            <input type="email" id = "contact2" placeholder="Email ID"/><br></br>
+            <label for="petpic" id="label"><b>Upload A Pic Of Your Pet</b></label><br></br>
+            <div id="photo">
+                <input type="file" id="petpic"/><br></br>
+            </div>
+            <button type="submit" id="butt">Register My Pet</button><br></br>
+            
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="./forms.js"></script>
+</body>
+</html>
+
+
+                

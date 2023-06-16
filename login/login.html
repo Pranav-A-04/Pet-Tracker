@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Login</title>
+    
+</head>
+<body>
+    
+    <div class="topic">
+        <h1>Pet Tracker</h1>
+    </div>
+    <div class="formdiv">
+        <form class="form" id="loginn" autocomplete="on">
+            <h1 class="title">Login</h1>
+            <label class="label">Email ID</label><br>
+            <input type="email" id="email" placeholder="Email ID"/><br>
+            <label class="label">Password</label><br>
+            <input type="password" id="pwd" placeholder="password"/><br>
+            <span id="pwd_error"></span><br>
+            <button type="submit" class="butt" onclick="signin()">Login</button>
+             <div class="questions">
+                <a href="#" class="link" id="fpl" onclick="resetpwd()">forgot password?</a><br>
+                <a href="#" class="link" id="cal" onclick="caf()">Not an existing user? Click here</a><br>
+                <a href="#" class="link" id="vnl" onclick="vnf()">volunteer/NGO</a>
+             </div>
+        </form>
+        <form class="hide" id="createacc" autocomplete="on">
+            <h1 class="title">Create Account</h1>
+            <label class="label">Full Name</label><br>
+            <input type="text" id="name" placeholder="Full Name"/><br>
+
+            <label class="label">Contact Number</label><br>
+            <input type="text" id="phone" placeholder="Phone No"/><br>
+
+            <label class="label">Email ID</label><br>
+            <input type="email" id="email2" placeholder="Email ID"/><br>
+                
+            <label class="label">Create Password</label><br>
+            <input type="password" id="pwd2" placeholder="password"/><br>
+                
+            
+
+            <label class="label">Confirm Password</label><br>
+            <input type="password" id="pwd3" placeholder="confirm password"/><br>
+
+            <button type="submit" class="butt" onclick="signup()">Create Account</button>
+            <div class="questions">
+                <a href="#" class="link" id="btl" onclick="btlf()">back to login</a><br>
+            </div>
+            
+        </form>
+
+        <form class="hide" id="ngo" autocomplete="on">
+            <h1 class="title">Verify Your Organization</h1>
+            <label class="label">Organization Name</label><br>
+            <input type="text" id="name5" placeholder="Organization Name"/><br>
+            <label class="label">Contact Number</label><br>
+            <input type="text" id="phone5" placeholder="Phone No"/><br>
+            <label class="label">Organization Email ID</label><br>
+            <input type="email" id="email5" placeholder="Email ID"/><br>
+            
+            <button type="submit" class="butt" onclick="verifyngo()">Verify and Register</button>
+             <div class="questions">
+                <a href="#" class="link" id="btl1" onclick="btlf()">go back to home page</a><br>
+             </div>
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="loginfin.js"></script>
+    
+</body>
+</html>

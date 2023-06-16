@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        img{                                               
+            box-sizing: border-box;
+            height:170px;
+            width:250px;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class = "container mt-3">
+        <table class = "table table-hover table-responsive table-striped table-dark" id="table">
+        <thead>
+            <th>Pet Name</th>
+            <th>Type</th>
+            <th>Description</th>
+            <th>Contact Number</th>
+            <th>E-Mail ID</th>
+            <th>Picture</th>
+        </thead>
+        <tbody id="tbody1"></tbody>
+       </table>
+    </div>
+
+   <script type="module">
+
+    var tbody = document.getElementById('tbody1');
+    function additem(name, type, desc, contact, email, imgurl){
+        let trow = document.createElement('tr');
+        let td1 = document.createElement('td');
+        let td2 = document.createElement('td');
+        let td3 = document.createElement('td');
+        let td4 = document.createElement('td');
+        let td5 = document.createElement('td');
+        let td6 = document.createElement('td');
+    
+    
+
+        td1.innerHTML = name;
+        td2.innerHTML = type;
+        td3.innerHTML = desc;
+        td4.innerHTML = contact;
+        td5.innerHTML = email;
+        td6.innerHTML = "<img src=" + imgurl + ">";
+
+        
+
+
+        trow.appendChild(td1);
+        trow.appendChild(td2);
+        trow.appendChild(td3);
+        trow.appendChild(td4);
+        trow.appendChild(td5);
+        trow.appendChild(td6);
+
+        tbody.appendChild(trow);
+    }
+
+    function addall(array){
+        tbody.innerHTML = "";
+        array.forEach(element => {
+            additem(element.name, element.animal ,element.desc, element.num, element.email, element.imgurl)
+            
+        });
+    }
+
+    
+    
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+
+  const firebaseConfig = {
+
+    apiKey: "AIzaSyC28iIAbluDMJPzRz2nvrME6PiFuNrV3n0",
+    authDomain: "sample2-ea4ce.firebaseapp.com",
+    databaseURL: "https://sample2-ea4ce-default-rtdb.firebaseio.com",
+    projectId: "sample2-ea4ce",
+    storageBucket: "sample2-ea4ce.appspot.com",
+    messagingSenderId: "407111677620",
+    appId: "1:407111677620:web:97d50288f240a3e1ad89e1",
+    measurementId: "G-HPJQT5DLPG"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+
+  import { getDatabase, ref, child, onValue, get}
+  from  "https://www.gstatic.com/firebasejs/9.22.0/firebase-database.js";
+  const db = getDatabase();
+
+
+
+    function getall(){
+        const dbref = ref(db);
+        get(child(dbref, "pet_tracker"))
+        .then((snapshot)=>{
+            var pets =[];
+
+            snapshot.forEach(childSnapshot =>{
+                pets.push(childSnapshot.val());
+            })
+
+            addall(pets);
+        })
+    }
+    
+    window.onload = getall;
+
+    
+
+   </script>
+
+   <script src="display.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+body{
+    align-items: center;
+    background-image: url("lojin1.png");
+}
+
+.topic{
+    align-self: center;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: x-large;
+    border-radius: 8px;
+    border-color: black;
+    border-style: none;
+    border-width: 5px;
+    
+}
+.title{
+    color: white;
+    margin-top:10px;
+}
+.label{
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    margin-top: 60px;
+}
+
+.formdiv{
+    margin-top: 25px;
+    align-self: center;
+    text-align: center;
+    border-style: solid;
+    border-radius:10px;
+    margin-left: 510px;
+    margin-right: 500px;
+    padding-bottom: 30px;
+    padding-top: 5px;
+    background-color: rgb(163, 125, 76);
+}
+.hide{
+    display: none;
+}
+#name{
+    margin-top:5px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+}
+#phone{
+    margin-top:5px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+}
+#email{
+    margin-top:5px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+}
+#email2{
+    margin-top:5px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+}
+#pwd{
+    margin-top:5px;
+    border-radius: 3px;
+    margin-top: 5px;
+}
+#pwd2{
+    margin-top:5px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+}
+#pwd3{
+    margin-top:5px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+}
+#key{
+    margin-top:5px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+}
+.link{
+    padding-top: 10px;
+    color: white;
+}
+#fpl{
+    margin-top: 10px;
+}
+#cal{
+    padding-top: 3px;
+}
+#btl{
+    padding-top: 3px;
+}
+#vnl{
+    padding-top: 3px;
+}
+.butt{
+    margin-top: 8px;
+    margin-bottom: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 12px;
+    padding-right: 12px;
+    background-color: beige;
+    border-radius: 4px;
+    color:black;
+}
